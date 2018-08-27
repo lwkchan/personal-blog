@@ -5,8 +5,8 @@ const Header = ({ siteTitle }) =>
 (
   <div
     style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem'
+      background: 'orange',
+      marginBottom: '1.50rem'
     }}
   >
     <div
@@ -20,8 +20,7 @@ const Header = ({ siteTitle }) =>
         <Link
           to="/"
           style={{
-            color: 'white',
-            textDecoration: 'none'
+            color: 'black'
           }}
         >
           {siteTitle}
