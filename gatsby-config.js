@@ -1,4 +1,11 @@
 const contentfulConfig = require('./contentful-config')
+const { spaceId, accessToken } = contentfulConfig
+
+if (!spaceId || !accessToken) {
+  throw new Error(
+    'Contentful spaceId and the delivery token need to be provided.'
+  )
+}
 
 module.exports = {
   siteMetadata: {
