@@ -1,7 +1,7 @@
 import Link from 'gatsby-link'
 import React from 'react'
 
-const Header = ({ siteTitle }) =>
+const Header = ({ headerText }) =>
 (
   <div
     style={{
@@ -23,7 +23,7 @@ const Header = ({ siteTitle }) =>
             color: 'black'
           }}
         >
-          {siteTitle}
+          {headerText}
         </Link>
       </h1>
     </div>
