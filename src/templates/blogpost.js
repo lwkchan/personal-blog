@@ -1,10 +1,10 @@
 import Layout from '../components/layout'
 import React from 'react'
 
-const BlogPostTemplate = ({data}) => {
-  const blogPost = data.allContentfulBlogpost.edges[0].node
-  console.log(blogPost)
-  const { author, title, bodyText } = blogPost
+const BlogpostTemplate = ({data}) => {
+  const blogpost = data.allContentfulblogpost.edges[0].node
+  console.log(blogpost)
+  const { author, title, bodyText } = blogpost
   return (
     <Layout>
       <h1>{title}</h1>
@@ -14,7 +14,7 @@ const BlogPostTemplate = ({data}) => {
   )
 }
 
-export default BlogPostTemplate
+export default BlogpostTemplate
 
 export const pageQuery = graphql`
   query blogpostQuery($slug: String!) {
