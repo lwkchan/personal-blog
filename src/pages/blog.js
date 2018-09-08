@@ -21,12 +21,9 @@ export default Blog
 
 export const pageQuery = graphql`
   query allBlogPostsQuery {
-    allContentfulBlogpost {
+    allContentfulBlogpost (sort: {fields: [publicationDate] order:DESC}) {
       edges {
         node {
-          id
-          title
-          subHeading
           heroImage {
             file {
               url
@@ -35,6 +32,10 @@ export const pageQuery = graphql`
               ...GatsbyContentfulResolutions
             }
           }
+          id
+          publicationDate
+          subHeading
+          title
         }
       }
     }
