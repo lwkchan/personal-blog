@@ -10,7 +10,7 @@ const Blog = ({data}) => {
         <ul>
         {blogposts.map(({node}) => {
           return (
-            <ArticlePreview node={node}/>
+            <ArticlePreview key={node.id} node={node}/>
           )
         })}
         </ul> 
@@ -24,11 +24,15 @@ export const pageQuery = graphql`
     allContentfulBlogpost {
       edges {
         node {
+          id
           title
           subHeading
           heroImage {
             file {
               url
+            }
+            resolutions(width:152, height:152, resizingBehavior: NO_CHANGE) {
+              ...GatsbyContentfulResolutions
             }
           }
         }
