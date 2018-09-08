@@ -1,24 +1,35 @@
-import React from 'react'
+import ArticlePreview from '../components/article-preview/article-preview'
 import Layout from '../components/layout'
+import React from 'react'
 
-const Blog = () => (
+const Blog = ({data}) => {
+  const blogposts = data.allContentfulBlogpost.edges
+  return (
     <Layout siteTitle='sitetitle' headerText='headertext'>
-        <p>this is a test</p>
-    </Layout>
-)
+        <p>Here are a list of recent blogposts</p>
+        <ul>
+        {blogposts.map(({node}) => {
+          return (
+            <ArticlePreview node={node}/>
+          )
+        })}
+        </ul> 
+    </Layout>)
+}
 
 export default Blog
 
 export const pageQuery = graphql`
   query allBlogPostsQuery {
-    allContentfulBlogpost(filter: {slug: {eq: $slug}}) {
+    allContentfulBlogpost {
       edges {
         node {
-          id
           title
-          author  
-          bodyText {
-            bodyText
+          subHeading
+          heroImage {
+            file {
+              url
+            }
           }
         }
       }
