@@ -17,6 +17,8 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: contentfulConfig,
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     // {
     //   resolve: `gatsby-plugin-typography`,
     //   options: {
