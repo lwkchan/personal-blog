@@ -1,16 +1,15 @@
-import React from 'react'
 import Img from 'gatsby-image'
+import React from 'react'
+import styles from './article-preview.module.css'
 
 const ArticlePreview = ({node}) => (
-    <article className="article-preview" key={node.id}>
-        <div>
-        <div className="article-preview__details">
+    <article className={styles.container} key={node.id}>
+        <div className={styles.details}>
             <h3>{node.title}</h3>
             <h4>{node.subHeading}</h4>
-            <p>{node.publicationDate}</p>
+            <p className={styles.publicationDate}>{node.publicationDate}</p>
         </div>
-        <Img className="article-preview__image" resolutions={node.heroImage.resolutions}/>
-        </div>
+        <Img className={styles.previewImage} resolutions={node.heroImage.resolutions}/>
     </article>
 )
 
