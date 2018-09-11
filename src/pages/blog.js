@@ -8,11 +8,11 @@ const Blog = ({data}) => {
     <Layout siteTitle='sitetitle' headerText='headertext'>
         <p>Here are a list of recent blogposts</p>
         <ul>
-        {blogposts.map(({node}) => {
-          return (
-            <ArticlePreview key={node.id} node={node}/>
-          )
-        })}
+          {blogposts.map(({node}) => {
+            return (
+              <ArticlePreview key={node.id} node={node}/>
+            )
+          })}
         </ul> 
     </Layout>)
 }
