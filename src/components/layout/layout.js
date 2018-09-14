@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from './header'
+import Header from '../header/header'
 import './layout.css'
 
 const Layout = ({ children, siteTitle, headerText }) =>

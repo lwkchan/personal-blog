@@ -1,5 +1,5 @@
 import ArticlePreview from '../components/article-preview/article-preview'
-import Layout from '../components/layout'
+import Layout from '../components/layout/layout'
 import React from 'react'
 
 const Blog = ({data}) => {
