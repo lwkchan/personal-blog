@@ -18,12 +18,6 @@ module.exports = {
       options: contentfulConfig,
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-typography`,
-    //   options: {
-    //     pathToConfigModule: `src/utils/typography`,
-    //   },
-    // }
+    `gatsby-plugin-sharp`
   ]
 }
