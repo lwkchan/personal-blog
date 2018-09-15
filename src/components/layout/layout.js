@@ -1,28 +1,14 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Header from '../header/header'
+import styles from './layout.module.css'
 
-const Layout = ({ children, siteTitle, headerText }) =>
+const Layout = ({ children, siteTitle, pageName }) =>
 (
   <div>
-    <Helmet
-      title={siteTitle}
-      meta={[
-        { name: 'description',
-        content: 'Sample' },
-        { name: 'keywords',
-          content: 'sample, something' }
-      ]}
-    />
-    <Header headerText={headerText} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0
-      }}
-    >
+    <Helmet title={siteTitle}/>
+    <Header headerText={pageName} />
+    <div className={styles.layout}>
       {children}
     </div>
   </div>
