@@ -1,9 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
 import Header from '../header/header'
-import './layout.css'
 
 const Layout = ({ children, siteTitle, headerText }) =>
 (
@@ -12,9 +9,9 @@ const Layout = ({ children, siteTitle, headerText }) =>
       title={siteTitle}
       meta={[
         { name: 'description',
-content: 'Sample' },
+        content: 'Sample' },
         { name: 'keywords',
-content: 'sample, something' }
+          content: 'sample, something' }
       ]}
     />
     <Header headerText={headerText} />
