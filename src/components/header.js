@@ -11,7 +11,7 @@ const Content = styled.div`
 
 const StyledLink = styled(Link)`
   margin: 5%;
-  color: green;
+  color: ${(props) => props.theme.primaryColor};
   text-decoration: unset;
   font-weight: initial;
   font-size: large;

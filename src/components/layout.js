@@ -1,7 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Header from './header'
-import styled from 'styled-components'
+import styled, {ThemeProvider} from 'styled-components'
+import theme from '../theme'
 
 const Body = styled.div`
   font-family: 'Karla', sans-serif;
@@ -9,13 +10,14 @@ const Body = styled.div`
 
 const Main = styled.div`
   margin: 0 auto;
-  max-width: 650px;
+  max-width: ${(props) => props.theme.maxWidth};
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
 `
 
 const Layout = ({ children, siteTitle, pageName }) =>
-(
+( 
+  <ThemeProvider theme={theme}>
     <Body>
       <Helmet title={siteTitle}/>
       <Main>
@@ -23,6 +25,7 @@ const Layout = ({ children, siteTitle, pageName }) =>
         {children}
       </Main>
     </Body>
+  </ThemeProvider>
 )
 
 export default Layout

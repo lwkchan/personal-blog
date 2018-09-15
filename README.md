@@ -19,6 +19,6 @@ I was motivated to build this by an investigation into headless CMSes and by the
 
 - [ ] Finish up styling
   - [x] ~Implement typography.js for fonts~ - tried it out bu didn't enjoy it.
-  - [ ] Decide on general layout and add it to the site
+  - [x] Decide on general layout and add it to the site
 - [ ] Deploy site using Netlify
   - [ ] Set up continuous deloyment by creating webhook to rebuild site when new content is published in Contentful. (Useful guide [here](https://www.halfelectronic.com/post/setting-up-gatsby-js-contentful-and-netlify/))
