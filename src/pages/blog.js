@@ -1,11 +1,13 @@
 import ArticlePreview from '../components/article-preview/article-preview'
 import Layout from '../components/layout/layout'
 import React from 'react'
+import styles from './styles/blog.module.css'
 
 const Blog = ({data}) => {
   const blogposts = data.allContentfulBlogpost.edges
   return (
     <Layout siteTitle='sitetitle' headerText='headertext'>
+      <div className={styles.blogList}>
         <p>Here are a list of recent blogposts</p>
         <ul>
           {blogposts.map(({node}) => {
@@ -14,6 +16,7 @@ const Blog = ({data}) => {
             )
           })}
         </ul> 
+      </div>
     </Layout>)
 }
 
@@ -28,7 +31,7 @@ export const pageQuery = graphql`
             file {
               url
             }
-            resolutions(width:152, height:152, resizingBehavior: NO_CHANGE) {
+            resolutions(width:152, height:152, resizingBehavior: PAD) {
               ...GatsbyContentfulResolutions
             }
           }
