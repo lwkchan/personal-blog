@@ -5,7 +5,7 @@ import styles from './layout.module.css'
 
 const Layout = ({ children, siteTitle, pageName }) =>
 (
-  <div>
+  <div className={styles.body}>
     <Helmet title={siteTitle}/>
     <Header headerText={pageName} />
     <div className={styles.layout}>

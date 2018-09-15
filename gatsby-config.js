@@ -18,6 +18,15 @@ module.exports = {
       options: contentfulConfig,
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `karla`,
+          `source sans pro\:300,400,400i,700`
+        ]
+      }
+    }
   ]
 }
