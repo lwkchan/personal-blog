@@ -33,11 +33,11 @@ const PublicationDate = styled.p`
     margin-bottom: 0;
 `
 
-const StyledTitle = styled.p`
+const Title = styled.p`
     font-size: 20px;
     margin: 0;
 `
-const StyledSubtitle = styled.p`
+const Subtitle = styled.p`
     font-size: 12px;
     margin: 0;
 `
@@ -46,12 +46,12 @@ const ArticlePreview = ({node}) => (
     <StyledLink to={`/blog/${node.slug}/`}>
         <ArticleCard>
                 <Details>
-                    <StyledTitle>
+                    <Title>
                         {node.title}
-                    </StyledTitle>
-                    <StyledSubtitle>
+                    </Title>
+                    <Subtitle>
                         {node.subHeading}
-                    </StyledSubtitle>
+                    </Subtitle>
                     <PublicationDate>
                         {node.publicationDate}
                     </PublicationDate>
