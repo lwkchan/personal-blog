@@ -1,13 +1,12 @@
-import ArticlePreview from '../components/article-preview/article-preview'
-import Layout from '../components/layout/layout'
+import ArticlePreview from '../components/article-preview'
+import Layout from '../components/layout'
 import React from 'react'
-import styles from './styles/blog.module.css'
 
 const Blog = ({data}) => {
   const blogposts = data.allContentfulBlogpost.edges
   return (
     <Layout siteTitle='sitetitle' headerText='headertext'>
-      <div className={styles.blogList}>
+      <div>
         <p>Here are a list of recent blogposts</p>
         <ul>
           {blogposts.map(({node}) => {
