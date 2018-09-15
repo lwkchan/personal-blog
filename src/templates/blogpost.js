@@ -3,7 +3,6 @@ import React from 'react'
 
 const Blogpost = ({data}) => {
   const blogpost = data.allContentfulBlogpost.edges[0].node
-  console.log(blogpost)
   const { author, title, bodyText } = blogpost
   return (
     <Layout>
