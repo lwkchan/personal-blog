@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 const Body = styled.div`
   font-family: 'Karla', sans-serif;
-`;
+`
 
 const Main = styled.div`
   margin: 0 auto;

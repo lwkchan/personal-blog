@@ -5,11 +5,13 @@ import styled from 'styled-components'
 
 const ArticleCard = styled.article`
     margin: 0 auto;
-    width: 70%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 30px auto;
-    height: 130px;
+    height: auto;
+    &:hover {
+        text-decoration: underline;
+    }
 `
 
 const Details = styled.div`
@@ -19,23 +21,39 @@ const Details = styled.div`
     flex-grow: 1;
     justify-content: space-between;
     align-items: stretch;
+    margin-top: 0;
 `
 
 const PublicationDate = styled.p`
     margin-bottom: 0;
 `
 
+const StyledTitle = styled.p`
+    font-size: 20px;
+    margin: 0;
+`
+const StyledSubtitle = styled.p`
+    font-size: 12px;
+    margin: 0;
+`
+
 const ArticlePreview = ({node}) => (
-    <ArticleCard>
-        <Details>
-        <Link to={`/blog/${node.slug}/`}>
-            <h3>{node.title}</h3>
-            <h4>{node.subHeading}</h4>
-        </Link>
-            <PublicationDate/>
-        </Details>
-        <Img resolutions={node.heroImage.resolutions}/>
-    </ArticleCard>
+    <Link to={`/blog/${node.slug}/`}>
+        <ArticleCard>
+                <Details>
+                    <StyledTitle>
+                        {node.title}
+                    </StyledTitle>
+                    <StyledSubtitle>
+                        {node.subHeading}
+                    </StyledSubtitle>
+                    <PublicationDate/>
+                </Details>
+                <Img
+                    resolutions={node.heroImage.resolutions}
+                />
+        </ArticleCard>
+    </Link>
 )
 
 export default ArticlePreview
