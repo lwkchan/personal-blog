@@ -3,12 +3,17 @@ import Link from 'gatsby-link'
 import React from 'react'
 import styled from 'styled-components'
 
+const StyledLink = styled(Link)`
+    text-decoration: none;
+`
+
 const ArticleCard = styled.article`
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
     height: auto;
+    text-decoration: none;
     &:hover {
         text-decoration: underline;
     }
@@ -38,7 +43,7 @@ const StyledSubtitle = styled.p`
 `
 
 const ArticlePreview = ({node}) => (
-    <Link to={`/blog/${node.slug}/`}>
+    <StyledLink to={`/blog/${node.slug}/`}>
         <ArticleCard>
                 <Details>
                     <StyledTitle>
@@ -47,13 +52,15 @@ const ArticlePreview = ({node}) => (
                     <StyledSubtitle>
                         {node.subHeading}
                     </StyledSubtitle>
-                    <PublicationDate/>
+                    <PublicationDate>
+                        {node.publicationDate}
+                    </PublicationDate>
                 </Details>
                 <Img
                     resolutions={node.heroImage.resolutions}
                 />
         </ArticleCard>
-    </Link>
+    </StyledLink>
 )
 
 export default ArticlePreview
