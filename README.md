@@ -1,6 +1,6 @@
 # Personal Blog
 
-A personal blog built with GatsbyJs and Contentful. Still a work in progress. I'll post up the link to it when it is hosted on a server.
+A personal blog built with GatsbyJs. Still a work in progress. I'll post up the link to it when it is hosted on a server.
 
 ## Getting started locally
 
@@ -11,10 +11,6 @@ Then,
 2. Run `gatsby develop`
 3. Visit http://localhost:8000
 
-## Key learnings/motivations
-
-I was motivated to build this by an investigation into headless CMSes and by the wish to learn about static site renderers. Through this project, I have become interested in the [JAM stack](https://jamstack.org/), and what it presents for the future of web development.
-
 ## Todo
 
 - [ ] Finish up styling
@@ -22,3 +18,9 @@ I was motivated to build this by an investigation into headless CMSes and by the
   - [x] Decide on general layout and add it to the site
 - [ ] Deploy site using Netlify
   - [ ] Set up continuous deloyment by creating webhook to rebuild site when new content is published in Contentful. (Useful guide [here](https://www.halfelectronic.com/post/setting-up-gatsby-js-contentful-and-netlify/))
+
+## A sidenote on using Contentful
+
+This project was initially built with [Contentful](ttps://www.contentful.com) as a CMS. I started down that route as I was interested to learn more about headless CMSes. However, although Contentful is a very powerful tool which is incredibly easy to use, I realised that I wanted more flexibility than a content model set up by myself was willing to give me. A content model is great for if you have multiple authors, and you need to keep all of the content looking someone consistent. However, because I am both the only developer and the only writer for this site, I am hopeful that I can keep these posts somewhat consistent.
+
+If your interested in seeing how I set up Contentful in my blog, see the [contentful-setup branch](https://github.com/lwkchan/personal-blog/tree/contentful-setup)
