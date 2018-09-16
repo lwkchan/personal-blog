@@ -43,22 +43,19 @@ const Subtitle = styled.p`
 `
 
 const ArticlePreview = ({node}) => (
-    <StyledLink to={`/blog/${node.slug}/`}>
+    <StyledLink to={`/blog${node.fields.slug}`}>
         <ArticleCard>
                 <Details>
                     <Title>
-                        {node.title}
+                        {node.frontmatter.title}
                     </Title>
                     <Subtitle>
-                        {node.subHeading}
+                        {node.excerpt}
                     </Subtitle>
                     <PublicationDate>
-                        {node.publicationDate}
+                        {node.frontmatter.date}
                     </PublicationDate>
                 </Details>
-                <Img
-                    resolutions={node.heroImage.resolutions}
-                />
         </ArticleCard>
     </StyledLink>
 )

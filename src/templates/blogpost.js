@@ -1,33 +1,31 @@
 import Layout from '../components/layout'
 import React from 'react'
+import rehypeReact from 'rehype-react'
+
+const renderAst = new rehypeReact({
+  createElement: React.createElement,
+}).Compiler
 
 const Blogpost = ({data}) => {
-  const blogpost = data.allContentfulBlogpost.edges[0].node
-  const { author, title, bodyText } = blogpost
+  const node = data.markdownRemark
   return (
     <Layout>
-      <h1>{title}</h1>
-      <h2>By {author}</h2>
-      <p>{bodyText.bodyText}</p>
+      <h1>{node.frontmatter.title}</h1>
+        <div>{renderAst(node.htmlAst)}</div>
     </Layout>
   )
 }
 
 export default Blogpost
 
-export const pageQuery = graphql`
-  query blogpostQuery($slug: String!) {
-    allContentfulBlogpost(filter: {slug: {eq: $slug}}) {
-      edges {
-        node {
-          id
-          title
-          author  
-          bodyText {
-            bodyText
-          }
-        }
+export const query = graphql`
+  query BlogPostQuery($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      htmlAst
+      frontmatter {
+        title
       }
+      rawMarkdownBody
     }
   }
-`
+`;

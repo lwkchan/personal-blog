@@ -7,3 +7,6 @@ yarn-error.log
 /public
 .DS_Store
 contentful-config.js
+
+# Blogposts
+posts

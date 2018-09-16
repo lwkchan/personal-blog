@@ -1,12 +1,3 @@
-const contentfulConfig = require('./contentful-config')
-const { spaceId, accessToken } = contentfulConfig
-
-if (!spaceId || !accessToken) {
-  throw new Error(
-    'Contentful spaceId and the delivery token need to be provided.'
-  )
-}
-
 module.exports = {
   siteMetadata: {
     title: 'Laura Chan',
@@ -14,8 +5,27 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet', 
     {
-      resolve: `gatsby-source-contentful`,
-      options: contentfulConfig,
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/posts/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 590,
+            },
+          },
+        ],
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

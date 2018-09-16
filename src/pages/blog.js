@@ -5,7 +5,7 @@ import React from 'react'
 
 
 const Blog = ({data}) => {
-  const blogposts = data.allContentfulBlogpost.edges
+  const blogposts = data.allMarkdownRemark.edges
   return (
     <Layout siteTitle='sitetitle' headerText='headertext'>
       <div>
@@ -21,23 +21,20 @@ const Blog = ({data}) => {
 export default Blog
 
 export const pageQuery = graphql`
-  query allBlogPostsQuery {
-    allContentfulBlogpost (sort: {fields: [publicationDate] order:DESC}) {
+  query AllBlogpostsQuery {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
       edges {
         node {
-          heroImage {
-            file {
-              url
-            }
-            resolutions(width:152, height:152, resizingBehavior: PAD) {
-              ...GatsbyContentfulResolutions
-            }
-          }
           id
-          publicationDate
-          slug
-          subHeading
-          title
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+          }
+          fields {
+            slug
+          }
+          excerpt
         }
       }
     }
