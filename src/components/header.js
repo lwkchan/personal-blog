@@ -15,6 +15,9 @@ const StyledLink = styled(Link)`
   text-decoration: unset;
   font-weight: initial;
   font-size: large;
+  &:hover {
+    text-decoration: underline;
+  }
 `
 
 const Header = () =>
