@@ -13,7 +13,7 @@ Then,
 
 ## Todo
 
-- [ ] Finish up styling
+- [x] Finish up styling
   - [x] ~Implement typography.js for fonts~ - tried it out bu didn't enjoy it.
   - [x] Decide on general layout and add it to the site
 - [ ] Deploy site using Netlify
