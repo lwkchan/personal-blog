@@ -42,22 +42,28 @@ const Subtitle = styled.p`
     margin: 0;
 `
 
-const ArticlePreview = ({node}) => (
+const ArticlePreview = ({node}) => {
+    const { indexImage, title, date } = node.frontmatter
+    const indexImageExists = !!indexImage
+    return ( 
     <StyledLink to={`/blog${node.fields.slug}`}>
         <ArticleCard>
                 <Details>
                     <Title>
-                        {node.frontmatter.title}
+                        {title}
                     </Title>
                     <Subtitle>
                         {node.excerpt}
                     </Subtitle>
                     <PublicationDate>
-                        {node.frontmatter.date}
+                        {date}
                     </PublicationDate>
                 </Details>
+                { indexImageExists
+                    && 
+                <Img resolutions={indexImage.childImageSharp.resolutions} /> }
         </ArticleCard>
     </StyledLink>
-)
+)}
 
 export default ArticlePreview

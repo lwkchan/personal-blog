@@ -30,6 +30,13 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            indexImage {
+              childImageSharp {
+                resolutions(width:152, height:152) {
+                  ...GatsbyImageSharpResolutions
+                }
+              }
+            }
           }
           fields {
             slug
