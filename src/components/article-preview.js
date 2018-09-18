@@ -52,7 +52,7 @@ const ArticlePreview = ({node}) => {
     return ( 
         <ArticleCard>
                 <Details>
-                <StyledLink to={`/blog${node.fields.slug}`}>
+                <StyledLink to={`/blog/${node.fields.slug}`}>
                     <Title>
                         {title}
                     </Title>
