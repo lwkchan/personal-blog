@@ -10,4 +10,4 @@ contentful-config.js
 
 # Blogposts
 post-templates
-posts
+src/posts
