@@ -17,10 +17,11 @@ Then,
   - [x] ~Implement typography.js for fonts~ - tried it out bu didn't enjoy it.
   - [x] Decide on general layout and add it to the site
 - [ ] Deploy site using Netlify
-  - [ ] Set up continuous deloyment by creating webhook to rebuild site when new content is published in Contentful. (Useful guide [here](https://www.halfelectronic.com/post/setting-up-gatsby-js-contentful-and-netlify/))
 
 ## A sidenote on using Contentful
 
-This project was initially built with [Contentful](ttps://www.contentful.com) as a CMS. I started down that route as I was interested to learn more about headless CMSes. However, although Contentful is a very powerful tool which is incredibly easy to use, I realised that I wanted more flexibility than a content model set up by myself was willing to give me. A content model is great for if you have multiple authors, and you need to keep all of the content looking someone consistent. However, because I am both the only developer and the only writer for this site, I am hopeful that I can keep these posts somewhat consistent.
+This project was initially built with [Contentful](ttps://www.contentful.com) as a CMS. I started down that route as I was interested to learn more about headless CMSes. 
+
+However, although Contentful is a very powerful tool which is incredibly easy to use, I realised that I wanted more flexibility than a content model set up by myself was willing to give me. A content model is great for if you have multiple authors, and you need to keep all of the content looking someone consistent. However, because I am both the only developer and the only writer for this site, and because my priority with this site is to have a platform to show my blogs, I decided that it was simpler to just maintain a folder of markdown files.
 
 If your interested in seeing how I set up Contentful in my blog, see the [contentful-setup branch](https://github.com/lwkchan/personal-blog/tree/contentful-setup)
