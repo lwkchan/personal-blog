@@ -9,5 +9,4 @@ yarn-error.log
 contentful-config.js
 
 # Blogposts
-post-templates
-src/posts
+# src/posts
