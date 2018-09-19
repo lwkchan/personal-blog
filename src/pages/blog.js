@@ -7,7 +7,7 @@ import React from 'react'
 const Blog = ({data}) => {
   const blogposts = data.allMarkdownRemark.edges
   return (
-    <Layout siteTitle='sitetitle' headerText='headertext'>
+    <Layout title={data.site.siteMetadata.title}>
       <div>
           {blogposts.map(({node}) => {
             return (
@@ -21,7 +21,7 @@ const Blog = ({data}) => {
 export default Blog
 
 export const pageQuery = graphql`
-  query AllBlogpostsQuery {
+  query AllBlogpostsAndTitleQuery {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
@@ -43,6 +43,12 @@ export const pageQuery = graphql`
           }
           excerpt
         }
+      }
+    }
+    site {
+      id
+      siteMetadata {
+        title        
       }
     }
   }

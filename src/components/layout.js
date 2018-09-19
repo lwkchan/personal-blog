@@ -15,13 +15,13 @@ const Main = styled.div`
   padding-top: 0;
 `
 
-const Layout = ({ children, title, pageName }) =>
+const Layout = ({ children, title }) =>
 ( 
   <ThemeProvider theme={theme}>
     <Body>
       <Helmet title={title} />
       <Main>
-      <Header headerText={pageName} />
+      <Header/>
         {children}
       </Main>
     </Body>
