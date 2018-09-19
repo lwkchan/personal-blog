@@ -32,7 +32,6 @@ const Header = () =>
         </StyledLink>
         <StyledLink
           activeStyle={activeLinkStyle}
-          exact
           to="/blog">
           Blog
         </StyledLink>
