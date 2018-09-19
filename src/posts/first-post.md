@@ -1,11 +1,10 @@
 ---
-title: "Sweet Pandas Eating Sweets"
-date: "2017-08-10"
+title: "First Post"
+date: "2018-9-18"
 ---
 
-Pandas are really sweet.
+Hello! And welcome to my first blogpost on the first blog which I built from the ground up myself - with a few frameworks along the way.
 
-Here's a video of a panda eating sweets.
+Inspired by [Shwan Swyx Wang](https://twitter.com/@swyx), I aim to use this blog to start 'learning in public'. That means, using this blog to show my notes and thought processes.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4n0xNbfJLR8" frameborder="0" allowfullscreen></iframe>
-
+Effective learning manifests in different ways in different people. Some people learn effectively by reading words, others by pictoral representations, some through analogies and stories. For me, learning comes about through a mixture of reading and writing. I love reading stories and thinking about how their structure got me to a point of understanding and appreciation. Then, as a second step, I love relaying those stories through my own words and my own style of writing. So I hope this blog becomes a journal of my own personal learning journey.
