@@ -1,9 +1,25 @@
 import Layout from '../components/layout'
 import React from 'react'
 import rehypeReact from 'rehype-react'
+import styled from 'styled-components'
+
+const PublicationDate = styled.h3`
+  color: ${(props) => props.theme.primaryColor};
+`
+
+const ExternalLink = styled.a`
+  color: ${(props) => props.theme.primaryColor};
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+`
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
+  components: {
+    a: ExternalLink
+  }
 }).Compiler
 
 const Blogpost = ({data}) => {
@@ -11,6 +27,7 @@ const Blogpost = ({data}) => {
   return (
     <Layout>
       <h1>{node.frontmatter.title}</h1>
+      <PublicationDate>{node.frontmatter.date}</PublicationDate>
         <div>{renderAst(node.htmlAst)}</div>
     </Layout>
   )
@@ -24,8 +41,8 @@ export const query = graphql`
       htmlAst
       frontmatter {
         title
+        date(formatString: "DD MMMM, YYYY")
       }
-      rawMarkdownBody
     }
   }
 `;

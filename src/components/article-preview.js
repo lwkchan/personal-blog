@@ -17,7 +17,7 @@ const ArticleCard = styled.article`
     color: ${(props) => props.theme.primaryColor};
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 30px auto;
     height: auto;
     text-decoration: none;

@@ -2,8 +2,6 @@ import ArticlePreview from '../components/article-preview'
 import Layout from '../components/layout'
 import React from 'react'
 
-
-
 const Blog = ({data}) => {
   const blogposts = data.allMarkdownRemark.edges
   return (
@@ -30,13 +28,6 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
-            indexImage {
-              childImageSharp {
-                resolutions(width:152, height:152) {
-                  ...GatsbyImageSharpResolutions
-                }
-              }
-            }
           }
           fields {
             slug
