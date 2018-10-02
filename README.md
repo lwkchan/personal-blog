@@ -1,6 +1,6 @@
 # Personal Blog
 
-A personal blog built with GatsbyJs. Still a work in progress. I'll post up the link to it when it is hosted on a server.
+A personal blog built with GatsbyJs. Still a work in progress.
 
 ## Getting started locally
 
