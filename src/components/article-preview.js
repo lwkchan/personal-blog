@@ -25,7 +25,6 @@ const ArticleCard = styled.article`
 `
 
 const Details = styled.div`
-    max-width: 60%;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
