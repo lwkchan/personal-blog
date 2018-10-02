@@ -9,4 +9,4 @@ yarn-error.log
 contentful-config.js
 
 # Blogposts
-src/posts
+# src/posts
