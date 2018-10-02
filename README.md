@@ -17,7 +17,8 @@ Then,
   - [x] ~Implement typography.js for fonts~ - tried it out bu didn't enjoy it.
   - [x] Decide on general layout and add it to the site
 - [x] Change sitetitles in Helmet
-- [ ] Deploy site using Netlify
+- [x] Deploy site using Netlify
+- [ ] Implement Prism for code highlighting
 
 ## A sidenote on using Contentful
 
