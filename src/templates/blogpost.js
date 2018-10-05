@@ -1,4 +1,5 @@
 import Layout from '../components/layout'
+import { graphql } from 'gatsby'
 import React from 'react'
 import rehypeReact from 'rehype-react'
 import styled from 'styled-components'
