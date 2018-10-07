@@ -19,6 +19,9 @@ Then,
 - [x] Change sitetitles in Helmet
 - [x] Deploy site using Netlify
 - [x] Implement Prism for code highlighting
+- [ ] Add a 'back to top' button in blogpost template
+- [ ] Implement infinite scroll/pagination on blog page 
+- [ ] Implement 'search' on blog page
 
 ## A sidenote on using Contentful
 
