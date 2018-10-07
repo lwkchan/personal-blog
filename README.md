@@ -18,7 +18,7 @@ Then,
   - [x] Decide on general layout and add it to the site
 - [x] Change sitetitles in Helmet
 - [x] Deploy site using Netlify
-- [ ] Implement Prism for code highlighting
+- [x] Implement Prism for code highlighting
 
 ## A sidenote on using Contentful
 
