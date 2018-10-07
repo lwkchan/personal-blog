@@ -2,12 +2,10 @@ import Link from 'gatsby-link'
 import React from 'react'
 import styled from 'styled-components'
 
-const activeLinkStyle = {textDecoration: 'underline'}
-
 const Content = styled.div`
   margin: 0 auto;
   text-align: center;
-`
+  `
 
 const StyledLink = styled(Link)`
   margin: 5%;
@@ -18,23 +16,37 @@ const StyledLink = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
-`
+  `
+const activeStyle = { textDecoration: 'underline' }
+
+const isActive = ({isCurrent}) => {
+  return isCurrent? {style: activeStyle} : null
+}
+const StyledExactLink = (props) => (
+  <StyledLink getProps={isActive} {...props} />
+);
+
+const isPartiallyActive = ({isPartiallyCurrent}) => {
+  return isPartiallyCurrent? {style: activeStyle} : null
+}
+
+const StyledPartialLink = (props) => (
+  <StyledLink getProps={isPartiallyActive} {...props} />
+);
+
 
 const Header = () =>
 (
     <Content>
       <h1>
-        <StyledLink
-          activeStyle={activeLinkStyle} 
-          exact
+        <StyledExactLink
           to="/">
           About
-        </StyledLink>
-        <StyledLink
-          activeStyle={activeLinkStyle}
+        </StyledExactLink>
+        <StyledPartialLink
           to="/blog">
           Blog
-        </StyledLink>
+        </StyledPartialLink>
       </h1>
     </Content>
 )
