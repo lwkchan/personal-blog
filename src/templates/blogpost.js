@@ -16,12 +16,21 @@ const ExternalLink = styled.a`
   }
 `
 
+const Subheading = styled.h2`
+  line-height: 30px;
+`
+
 const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: {
-    a: ExternalLink
+    a: ExternalLink,
+    h2: Subheading
   }
 }).Compiler
+
+const PostContent = styled.div`
+  line-height: 22px;
+`
 
 const Blogpost = ({data}) => {
   const node = data.markdownRemark
@@ -29,7 +38,7 @@ const Blogpost = ({data}) => {
     <Layout>
       <h1>{node.frontmatter.title}</h1>
       <PublicationDate>{node.frontmatter.date}</PublicationDate>
-        <div>{renderAst(node.htmlAst)}</div>
+        <PostContent>{renderAst(node.htmlAst)}</PostContent>
     </Layout>
   )
 }
